@@ -32,7 +32,7 @@ places = Addressable::URI.new(
                            :types => 'food',
                            :keyword => 'icecream',
                            :sensor => false,
-                           :key => 'AIzaSyCEj7y5rpqL6v-U9JjJCRZNFZCsjL8TA-Y'
+                           :key => 'KEY'
                          }
          ).to_s
 
