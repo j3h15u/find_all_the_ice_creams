@@ -66,8 +66,6 @@ icecream_choices.each do |icecream_choice|
    direction_results = RestClient.get(directions)
    direction_json = JSON.parse(direction_results)
 
-   #p direction_json["routes"].first["legs"].first["steps"].first["html_instructions"]
-
    direction_json["routes"].first["legs"].each do |leg|
      leg["steps"].each do |step|
        html_instructions.concat(step["html_instructions"])
@@ -76,11 +74,3 @@ icecream_choices.each do |icecream_choice|
 
    puts Nokogiri::HTML("#{html_instructions}").text
 end
-
-
-
-
-
-
- #and and equals symbols must be present
- #1061 Market St, San Francisco, CA
